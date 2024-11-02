@@ -3,13 +3,14 @@ import java.util.Scanner;
 
 public class PracticalTask {
 
-
+    //1
     public static void printThreeWords()  {
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
 
+    //2
     public static void checkSumSign() {
         int a;
         int b;
@@ -24,6 +25,7 @@ public class PracticalTask {
 
     }
 
+    //3
     public static void printColor() {
         int a;
         Scanner scanner = new Scanner(System.in);
@@ -37,6 +39,7 @@ public class PracticalTask {
                     }
     }
 
+    //4
     public static void compareNumbers() {
         int a;
         int b;
@@ -51,6 +54,7 @@ public class PracticalTask {
 
     }
 
+    //5
     public static void sumTrueOrFalse() {
         int a;
         int b;
@@ -65,6 +69,7 @@ public class PracticalTask {
 
     }
 
+    //6
     public static void checkNumbers() {
         int a;
         Scanner scanner = new Scanner(System.in);
@@ -76,6 +81,8 @@ public class PracticalTask {
         }
 
     }
+
+    //7
     public static void checkTrueOrFalseNumbers() {
         int a;
         Scanner scanner = new Scanner(System.in);
@@ -88,6 +95,7 @@ public class PracticalTask {
 
     }
 
+    //8
     public static void stringAndNumbers() {
         String a = "World";
         int b;
@@ -102,6 +110,28 @@ public class PracticalTask {
         }
 
     }
-}
 
+    //9
+    public static void leapYear() {
+        int a;
+        Scanner scanner = new Scanner(System.in);
+        a = scanner.nextInt();
+        if (a  % 4 == 0 ) {
+            if (a % 100 == 0) {
+                if (a % 400 == 0) {
+                    System.out.println(true);
+                } else {
+                    System.out.println(false);
+                }
+            } else {
+                System.out.println(true);
+            }
+        }   else {
+            System.out.println(false);
+        }
+
+    }
+    
+    //10
+}
 
