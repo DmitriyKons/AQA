@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class PracticalTask {
+
+
     public static void printThreeWords()  {
         System.out.println("Orange");
         System.out.println("Banana");
@@ -17,6 +21,18 @@ public class PracticalTask {
                 System.out.println("Сумма отрицтельная");
                 }
 
-        }
-
     }
+
+    public static void printColor() {
+        int a;
+        Scanner scanner = new Scanner(System.in);
+        a = scanner.nextInt();
+        if (a <= 0){
+            System.out.println("Красный");
+            }   else  if (a <= 100){
+                System.out.println("желтый");
+                }   else {
+                    System.out.println("зеленый");
+                    }
+    }
+}
