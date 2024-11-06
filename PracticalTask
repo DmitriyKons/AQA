@@ -1,13 +1,12 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 
 public class PracticalTask {
 
     //1
-    public static void printThreeWords()  {
-        System.out.println("Orange");
-        System.out.println("Banana");
-        System.out.println("Apple");
+    public static void printThreeWords() {
+        System.out.println("Orange\nBanana\nApple");
     }
 
     //2
