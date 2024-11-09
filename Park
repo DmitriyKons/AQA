@@ -1,10 +1,29 @@
 public class Park {
-    private String name;
-    private Attraction attraction;
-    public class Attraction {
-        private String info;
-        private String time;
-        private int value;
+    private static String name;
+
+    public Park(String name) {
+        this.name = name;
     }
-    
+
+    public class Attraction {
+        private String attractionInfo;
+        private String time;
+        private double value;
+
+        public Attraction(String attractionInfo, String time, double value) {
+            this.attractionInfo = attractionInfo;
+            this.time = time;
+            this.value = value;
+        }
+
+        @Override
+        public  String toString() {
+            return "Атракцион: " + attractionInfo + " Время работы: " + time + " Стоимость: " + value + " Руб. ";
+        }
+    }
+
+    @Override
+    public  String toString() {
+        return "Парк " + name ;
+    }
 }
