@@ -1,5 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        Staff.staff();
+        Staff staff = new Staff("Konstantinov Dmitriy", "laborant", "konstantinov@mailbox.com", 89986543210L, 10000, 24);
+        System.out.println(staff);
+
+        Staff[] staffArray = new Staff[5];
+        staffArray[0] = new Staff("Ivanov Ivan", "Engineer", "ivanov@mailbox.com", 89786788756L, 30000, 30);
+        staffArray[1] = new Staff("Petrov Petr", "Accountant", "petrov@mailbox.com", 89785743849L, 35000, 26);
+        staffArray[2] = new Staff("Aleksandrov Aleksandr", "Technician", "aleksandrov@mailbox.com", 89787593050L, 38000, 33);
+        staffArray[3] = new Staff("Greegorev Pavel", "Engineer", "greegorev@mailbox.com", 89788295577L, 30000, 25);
+        staffArray[4] = new Staff("Sidorova Anna", "HR-manager", "sidorova@mailbox.com", 89785553535L, 33000, 27);
+        for (int i = 0; i < staffArray.length; i++) {
+            System.out.println(staffArray[i]);
+        }
+
+        Park park1 = new Park("Николаева");
+        Park.Attraction attraction1 = park1.new Attraction("Батут", "9:00 - 19:00", 500);
+        Park.Attraction attraction2 = park1.new Attraction("Горки", "9:00 - 19:00", 300);
+        System.out.println(park1 + "\n" + attraction1 + "\n" + attraction2);
     }
+
 }
