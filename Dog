@@ -1,0 +1,32 @@
+public class Dog extends Animal {
+    String color;
+    private static int count;
+
+    public Dog(String name, String color) {
+        super(name);
+        this.color = color;
+        count++;
+    }
+
+    @Override
+    public void run(int a) {
+        if ((a < 0) || (a >= 500)) {
+            System.out.println(name + " столько не пробежит");
+        } else {
+            System.out.println(name + " пробежал " + a + "м.");
+        }
+    }
+
+    @Override
+    public void swim(int a) {
+        if ((a < 0) || (a >= 10)) {
+            System.out.println(name + " столько не проплывет");
+        } else {
+            System.out.println(name + " проплыл " + a + "м.");
+        }
+    }
+
+    public static int getCount() {
+        return count;
+    }
+}
