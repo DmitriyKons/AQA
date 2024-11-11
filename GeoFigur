@@ -1,0 +1,9 @@
+public interface GeoFigur {
+    double getPerimeter();
+
+    double getArea();
+
+    void setFillColor(String color);
+
+    void setBorderColor(String color);
+}
