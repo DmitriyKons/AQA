@@ -1,0 +1,21 @@
+public class Animal {
+    String name;
+    private static int count;
+
+    public Animal(String name) {
+        this.name = name;
+        count++;
+    }
+
+    void run(int a) {
+        System.out.println(name + " пробежал " + a + "м.");
+    }
+
+    void swim(int a) {
+        System.out.println(name + " проплыл " + a + "м.");
+    }
+
+    public static int getCount() {
+        return count;
+    }
+}
