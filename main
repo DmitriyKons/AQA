@@ -35,5 +35,21 @@ public class Main {
             catsArray[i].hangry();
             miska.ostatok();
         }
+
+        Circle circle1 = new Circle(5);
+        circle1.setFillColor("красный");
+        circle1.setBorderColor("зеленый");
+        circle1.result();
+
+        Square square1 = new Square(10, 20);
+        square1.setFillColor("желтый");
+        square1.setBorderColor("синий");
+        square1.result();
+
+        Triangle triangle1 = new Triangle(5, 5, 5);
+        triangle1.setFillColor("фиолетовый");
+        triangle1.setBorderColor("черный");
+        triangle1.result();
     }
+
 }
