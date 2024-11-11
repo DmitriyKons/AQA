@@ -1,0 +1,39 @@
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Animal("Бобик");
+        Dog dogBarsik = new Dog("Барсик", "каштановый");
+        Cat catVasiy = new Cat("Вася", 10);
+        animal1.swim(40);
+        dogBarsik.swim(130);
+        dogBarsik.run(555);
+        dogBarsik.run(150);
+        catVasiy.swim(20);
+        catVasiy.run(45);
+
+        System.out.println("Жвотных создано: " + Animal.getCount());
+        System.out.println("Собак создано: " + Dog.getCount());
+        System.out.println("Котов создано: " + Cat.getCount());
+
+        Foods miska = new Foods(100);
+        catVasiy.hangry();
+        miska.ostatok();
+        catVasiy.eat(miska.kolichestvo);
+        catVasiy.hangry();
+        miska.ostatok();
+        miska.popolnenie(20);
+        miska.ostatok();
+
+        Cat[] catsArray = new Cat[5];
+        catsArray[0] = new Cat("Черныш", 25);
+        catsArray[1] = new Cat("Беляш", 10);
+        catsArray[2] = new Cat("Пушок", 15);
+        catsArray[3] = new Cat("Тимоша", 19);
+        catsArray[4] = new Cat("Гарфилд", 30);
+        for (int i = 0; i < catsArray.length; i++) {
+            System.out.println("\n");
+            catsArray[i].eat(miska.kolichestvo);
+            catsArray[i].hangry();
+            miska.ostatok();
+        }
+    }
+}
