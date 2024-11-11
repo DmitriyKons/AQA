@@ -1,0 +1,39 @@
+public class Triangle implements GeoFigur {
+    private double suid1;
+    private double suid2;
+    private double suid3;
+    private String fillColor;
+    private String borderColor;
+
+    public Triangle(double suid1, double suid2, double suid3) {
+        this.suid1 = suid1;
+        this.suid2 = suid2;
+        this.suid3 = suid3;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return suid1 + suid2 + suid3;
+    }
+
+    @Override
+    public double getArea() {
+        double p = getPerimeter()/2;
+        return Math.sqrt(p * (p - suid1) *(p -suid2) *(p - suid3));
+    }
+
+    @Override
+    public void setFillColor(String color) {
+        this.fillColor = color;
+    }
+
+    @Override
+    public void setBorderColor(String color) {
+        this.borderColor = color;
+    }
+
+    void result() {
+        System.out.println("Треугольник с периметром: " + getPerimeter() + " площадью: "
+                + getArea() + " цвет заливки: " + fillColor + " цвет обводки: " + borderColor);
+    }
+}
