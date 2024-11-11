@@ -1,0 +1,47 @@
+public class Cat extends Animal {
+    private static int count;
+    int eating;
+    boolean hangry = false;
+
+    public Cat(String name, int eating) {
+        super(name);
+        this.eating = eating;
+        count++;
+    }
+
+    @Override
+    void swim(int a) {
+        System.out.println(name + " неумеет плавать");
+    }
+
+    public void run(int a) {
+        if ((a < 0) || (a >= 200)) {
+            System.out.println(name + " столько не пробежит");
+        }
+        System.out.println(name + " пробежал " + a + "м.");
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    void hangry(){
+       if (hangry == true) {
+           System.out.println(name + " не голоден");
+       }    else {
+           System.out.println(name + " голоден");
+       }
+    }
+
+    void eat(int a) {
+        if (a >= eating) {
+            a -= eating;
+            System.out.println(name + " поел");
+            hangry = true;
+            Foods.setKolichestvo(a);
+        } else {
+            System.out.println("Не достаточно еды для " + name);
+        }
+    }
+}
+
