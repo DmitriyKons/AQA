@@ -1,0 +1,19 @@
+public class Foods {
+    static int kolichestvo;
+
+    public Foods(int kolichestvo) {
+        this.kolichestvo = kolichestvo;
+    }
+
+    public static void setKolichestvo(int a) {
+        kolichestvo = a;
+    }
+
+    public void ostatok() {
+        System.out.println("Еды в миске осталось:" + kolichestvo);
+    }
+
+    public void popolnenie(int a) {
+        kolichestvo += a;
+    }
+}
