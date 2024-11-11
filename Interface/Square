@@ -1,0 +1,36 @@
+public class Square implements GeoFigur {
+    private double width;
+    private double height;
+    private String fillColor;
+    private String borderColor;
+
+    public Square(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * (width + height);
+    }
+
+    @Override
+    public double getArea() {
+        return width + height;
+    }
+
+    @Override
+    public void setFillColor(String color) {
+        this.fillColor = color;
+    }
+
+    @Override
+    public void setBorderColor(String color) {
+        this.borderColor = color;
+    }
+
+    void result() {
+        System.out.println("Квадрат с периметром: " + getPerimeter() + " площадью: "
+                + getArea() + " цвет заливки: " + fillColor + " цвет обводки: " + borderColor);
+    }
+}
